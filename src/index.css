@@ -45,3 +45,7 @@ form.login-form.white {
 position: relative;
 bottom: 8px;
 }
+
+li.spacing-for-items {
+  margin-bottom:10px;
+}

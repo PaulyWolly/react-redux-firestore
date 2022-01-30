@@ -3,6 +3,11 @@ import moment from 'moment'
 
 const ProjectSummary = ({project}) => {
   const timestamp = project && project.createdAt && project.createdAt.toDate();
+
+  const handleDelete = (id) => {
+    console.log('Asked to delete. Project ID: ', id)
+  }
+
   return (
     <div className="card  project-summary">
       <div className="card-content grey-text text-darken-3">
