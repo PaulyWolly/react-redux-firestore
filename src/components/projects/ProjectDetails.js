@@ -9,6 +9,10 @@ const ProjectDetails = (props) => {
   const { project, auth } = props;
   const timestamp = project && project.createdAt && project.createdAt.toDate();
 
+  const handleDelete = (id) => {
+    console.log('Asked to delete. Project ID: ', id)
+  }
+
   if (!auth.uid) return <Redirect to='/signin' />
   if (project) {
     return (
@@ -21,6 +25,11 @@ const ProjectDetails = (props) => {
           <div className="card-action grey lighten-4 grey-text">
             <div>Posted by {project.authorFirstName} {project.authorLastName}</div>
             <div>{moment(timestamp).calendar()}</div>
+            <div style={{textAlign: 'right', cursor: 'pointer', color: 'red'}}  className="button-delete">
+            <a type="button" className="btn-sm btn-danger" onClick={() => handleDelete(props.match.params.id)}>Delete</a>
+            </div>
+
+
           </div>
         </div>
       </div>
@@ -51,3 +60,12 @@ export default compose(
     collection: 'projects'
   }])
 )(ProjectDetails)
+
+// export default matchDispatchToProps = (dispatch) => {
+//   return {
+//       dispatchDeleteProject: (e, id) => {
+//           e.preventDefault()
+//           dispatch(deleteProject(id))
+//       })
+//   }
+// }

@@ -14,7 +14,7 @@ body {
 }
 
 form{
-  padding: 20px;
+  padding: 10px;
   margin-top: 60px;
 }
 
@@ -42,6 +42,28 @@ form.login-form.white {
 }
 
 .signUp-btn, .login-btn {
-position: relative;
-bottom: 8px;
+  position: relative;
+  bottom: 8px;
+}
+
+li.spacing-for-items {
+  margin-bottom:10px;
+}
+
+div.row {
+  margin-right: 20px;
+  padding: 0;
+}
+
+div.project-list{
+  height: 500px;
+  padding: 10px;
+  overflow-y: scroll;
+  background-color: #ec407a;
+}
+
+div.list-outer-container {
+  padding: 20px 10px 10px 10px;
+  border: 1px solid lightgrey;
+  margin-top: 5px;
 }
