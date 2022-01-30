@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "default": "marioplan-final",
+    "master": "react-redux-marioplan-807e4"
+  },
+  "targets": {}
+}
